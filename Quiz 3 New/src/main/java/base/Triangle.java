@@ -11,6 +11,12 @@ public class Triangle extends GeometricObject{
 		side3 = 1.0;
 	}
 
+	/**
+	 * Constructs triangle using side length parameters
+	 * @param side1
+	 * @param side2
+	 * @param side3
+	 */
 	public Triangle(double side1, double side2, double side3) {
 		super();
 		this.side1 = side1;
@@ -41,10 +47,19 @@ public class Triangle extends GeometricObject{
 	public void setSide3(double side3) {
 		this.side3 = side3;
 	}
+	
+	/**
+	 * returns perimeter of triangle
+	 * @return
+	 */
 	public double getPerimeter() {
 		return side1 + side2 + side3;
 	}
 	
+	/**
+	 * returns area of triangle using Heron's Law
+	 * @return
+	 */
 	public double getArea(){
 		double p = .5 * getPerimeter();
 		return Math.sqrt(p*(p-side1)*(p-side2)*(p-side3));
